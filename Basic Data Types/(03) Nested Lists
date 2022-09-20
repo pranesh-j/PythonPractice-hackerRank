@@ -1,0 +1,12 @@
+students = []
+scores = []
+for _ in range(int(input())):
+    name = input()
+    score = float(input())
+    student = [name, score]
+    students.append(student)
+    scores.append(score)
+secondLowestGrade = sorted(set(scores))[1]
+student_names = sorted(
+    [student[0] for student in students if student[1] == secondLowestGrade])
+print("\n".join(student_names))
